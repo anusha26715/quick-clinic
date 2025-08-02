@@ -1,14 +1,14 @@
 header{
     padding: 0 5%;
     position: sticky;
-    top: 20px;
+    top: 5px;
     z-index: 10000;
 }
 
 header>nav{
     padding: 5px 15px !important;
     border-radius: 50px;
-    background-color: rgba(65, 193, 186, 0.1);
+    background-color: rgb(231, 251, 249);
 }
 
 .nav-inner{

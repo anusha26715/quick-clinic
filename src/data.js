@@ -15,7 +15,7 @@ export const doctors = [
             { day: "Thursday", time: "12:00 PM - 6:00 PM" },
             { day: "Friday", time: "12:00 PM - 6:00 PM" },
         ],
-        bio:"Dr. Yammine Prathikantam is a homeopath with 1 year of experience. She is a member of the Indian Homeopathic Medical Association.",
+        bio:"Dr. Yammine is a homeopath with 1 year of experience. She is the chief associative member of the Indian Homeopathic Medical Association.",
         price:1100
     },
     {
@@ -35,7 +35,7 @@ export const doctors = [
             { day: "Thursday", time: "2:00 PM - 6:00 PM" },
             { day: "Friday", time: "2:00 PM - 6:00 PM" },
         ],
-        bio:"Dr. Yammine Prathikantam is a homeopath with 1 year of experience. She is a member of the Indian Homeopathic Medical Association.",
+        bio:"Dr. Prakruthi is a homeopath with 2 years of experience. She is the associative member of the Indian Homeopathic Medical Association.",
         price:1000
     },
     {

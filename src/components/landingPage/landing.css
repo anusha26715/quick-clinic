@@ -1,0 +1,143 @@
+.landing-container{
+    padding: 20px 5%;
+}
+
+.doctor-card{
+    background: var(--color-contrast);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.doctor-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.doctor-image{
+    position: relative;
+    overflow: hidden;
+}
+
+
+.doctor-image img{
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.doctor-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,color-mix(in srgb,var(--color-lighttealblue), transparent 10%) 0%,color-mix(in srgb, var(--color-lighttealblue), transparent 20%) 100%);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.doctor-image:hover .doctor-overlay {
+    opacity: 1;
+}
+
+.doctor-social {
+    display: flex;
+    gap: 15px;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.social-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: var(--color-contrast);
+    color: var(--color-tealblue);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.doctor-content{
+    padding: 30px 25px;
+    text-align: center;
+}
+
+.doctor-name {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    min-width: max-content;
+}
+
+.doctor-specialty {
+    color: var(--color-tealblue);
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.doctor-bio {
+    color: 
+    color-mix(in srgb, var(--color-navublue), transparent 20%);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.doctor-experience {
+    margin-bottom: 25px;
+}
+
+.experience-badge {
+    display: inline-block;
+    background: color-mix(in srgb, var(--color-tealblue), transparent 90%);
+    color: var(--color-navublue);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-appointment {
+    display: inline-block;
+    background: var(--color-tealblue);
+    color: var(--color-contrast);
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-appointment:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 3px var(--color-navyblue);
+    background-color: var(--color-navyblue);
+}
+
+.search-btn{
+    background-color: var(--color-tealblue);
+    border-color: var(--color-tealblue);
+}
+
+.search-btn:hover{
+    background-color: var(--color-navyblue);
+    border-color: var(--color-navyblue);
+}
+
+.search-btn>i{
+    color: var(--color-contrast);
+}
