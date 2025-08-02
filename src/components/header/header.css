@@ -1,0 +1,76 @@
+header{
+    padding: 0 5%;
+    position: sticky;
+    top: 20px;
+    z-index: 10000;
+}
+
+header>nav{
+    padding: 5px 15px !important;
+    border-radius: 50px;
+    background-color: rgba(65, 193, 186, 0.1);
+}
+
+.nav-inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-img{
+    height: auto;
+    width: 100px;
+}
+
+.navbar-collapse{
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 40%;
+}
+
+#navbarToggler,
+#navbarToggler:focus,
+#navbarToggler:active,
+#navbarToggler:focus-visible,
+#navbarToggler:focus-within {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-nav{
+    font-weight: bold;
+    width: 100%;
+}
+
+.navbar-nav>li{
+    margin: 0 auto;
+}
+
+.nav-link{
+    color: var(--color-navyblue);
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease; /* Add smooth color transition */
+}
+
+.nav-link:hover{
+    color: var(--color-tealblue); /* Change text color on hover */
+}
+
+.nav-link:hover::before{
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-tealblue); /* Add background color to make underline visible */
+    transform: scaleX(0); /* Start with zero width */
+    transition: transform 0.3s ease; /* Add smooth animation */
+}
+
+.nav-link:hover::before{
+    transform: scaleX(1); /* Expand to full width on hover */
+}
+
+
