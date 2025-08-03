@@ -26,7 +26,6 @@ export const doctors = [
         location:"Hyderabad",
         image:"../assets/yammine-doc1.jpg",
         rating:4.5,
-        reviews:100,
         availability:"Available",
         schedule:[
             { day: "Monday", time: "2:00 PM - 6:00 PM" },

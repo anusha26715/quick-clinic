@@ -14,6 +14,7 @@ const Landing = lazy(() => import('./components/landingPage/landing'))
 const Services = lazy(()=> import('./components/servicesPage/services'))
 const Contact = lazy(() => import('./components/contactPage/contact'))
 const DoctorProfile = lazy(() => import('./components/doctorProfilePage/doctorprofile'))
+const BookAppointment = lazy(()=> import('./components/bookAppointmentPage/bookappointment'))
 const Notfound = lazy(()=> import('./components/notFoundPage/notfound'))
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/doctors" element={<Landing/>}/>
           <Route path="/doctor/:id" element={<DoctorProfile/>} />
+          <Route path="/book-appointment/:id" element={<BookAppointment />} />
           <Route path="*" element={<Notfound />} />
         </Routes>
       </Suspense>

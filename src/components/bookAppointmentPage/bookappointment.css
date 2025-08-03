@@ -1,0 +1,117 @@
+/* Custom primary button using --color-tealblue */
+.custom-primary-btn {
+    background-color: var(--color-tealblue) !important;
+    border-color: var(--color-tealblue) !important;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.custom-primary-btn:hover {
+    background-color: var(--color-navyblue) !important;
+    border-color: var(--color-navyblue) !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-primary-btn:focus {
+    background-color: var(--color-tealblue) !important;
+    border-color: var(--color-tealblue) !important;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* Custom header using --color-tealblue */
+.custom-header {
+    background-color: var(--color-tealblue) !important;
+    border-color: var(--color-tealblue) !important;
+}
+
+/* Form focus states */
+.form-control:focus {
+    border-color: var(--color-tealblue);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* Card styling */
+.card {
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* Success message styling */
+.text-success {
+    color: #28a745 !important;
+}
+
+.border-success {
+    border-color: #28a745 !important;
+}
+
+/* Confirmation Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.confirmation-details {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.confirmation-details p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.confirmation-details p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .modal-content {
+        margin: 10px;
+        max-width: calc(100% - 20px);
+    }
+}

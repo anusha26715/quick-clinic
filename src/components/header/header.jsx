@@ -8,7 +8,7 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg mt-4">
                 <div className="container-fluid nav-inner">
                     <Link className="navbar-brand" to="/">
-                        <img src="src/assets/quick-clinic-logo.png" className='logo-img' alt="Quick Clinic" title="Quick Clinic"/>
+                        <img src="/images/quick-clinic-logo.png" className='logo-img' alt="Quick Clinic" title="Quick Clinic"/>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler">
                         <span className="navbar-toggler-icon"></span>
