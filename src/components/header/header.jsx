@@ -1,5 +1,4 @@
-
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './header.css'
 
 const Header = () => {
@@ -16,19 +15,19 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                            <Link className="nav-link" to="/">Home</Link>
+                              <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active-tab" : "") } to="/">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" to="/about">About</Link>
+                              <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active-tab" : "") } to="/about">About</NavLink>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" to="/services">Sevices</Link>
+                              <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active-tab" : "") } to="/services">Services</NavLink>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link" to="/doctors">Doctors</Link>
+                              <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active-tab" : "") } to="/doctors">Doctors</NavLink>
                             </li>
                             <li className="nav-item">
-                            <Link className="nav-link"to="/contact">Contact</Link>
+                              <NavLink className={({ isActive }) => "nav-link" + (isActive ? " active-tab" : "") } to="/contact">Contact</NavLink>
                             </li>
                         </ul>
                     </div>

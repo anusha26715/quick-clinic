@@ -1,3 +1,9 @@
+/* Underline for active tab */
+.active-tab {
+  border-bottom: 2px solid var(--color-tealblue);
+  font-weight: bold;
+  color: var(--color-tealblue) !important;
+}
 header{
     padding: 0 5%;
     position: sticky;

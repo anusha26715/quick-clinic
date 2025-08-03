@@ -1,9 +1,24 @@
-import React, {useState, useCallback} from 'react'
+import React, {useState, useCallback, useEffect} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './landing.css'
 import { doctors } from '../../data'
 
 const landing = () => {
+    const [showScrollTop, setShowScrollTop] = useState(false)
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > window.innerHeight-600) {
+                setShowScrollTop(true)
+            } else {
+                setShowScrollTop(false)
+            }
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+    const handleScrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
     const [search,setSearch] = useState('')
     const [specialty, setSpecialty] = useState('')
     const [doctorsList,setDoctorsList] = useState(doctors)
@@ -77,6 +92,23 @@ const landing = () => {
     
 
     return(
+        <>
+        {/* WhatsApp Floating Icon (always visible) */}
+        <a
+            href="https://wa.me/919959729488"
+            className="whatsapp-float"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp"
+        >
+            <i className="bi bi-whatsapp" style={{fontSize: '2.5rem', color: '#25D366'}}></i>
+        </a>
+
+        {/* Scroll to Top Arrow (visible only when needed) */}
+        <button className={`scroll-top-arrow${showScrollTop ? ' show' : ''}`} onClick={handleScrollToTop} aria-label="Scroll to top" style={{pointerEvents: showScrollTop ? 'auto' : 'none'}}>
+            <i className="bi bi-arrow-up-circle-fill" style={{fontSize: '2.5rem', color: 'var(--color-tealblue)'}}></i>
+        </button>
+
         <main className='landing-container'>
             <h2 className='text-center mt-4 mb-5 fw-bold'>Our Doctors are here for you</h2>
 
@@ -185,6 +217,7 @@ const landing = () => {
                 </ul>
             </section>
         </main>
+        </>
     )
 }
 

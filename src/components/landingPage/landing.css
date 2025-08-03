@@ -1,3 +1,44 @@
+.scroll-top-arrow {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.4,0,0.2,1), visibility 0.4s;
+}
+.scroll-top-arrow.show {
+  opacity: 1;
+  visibility: visible;
+}
+/* WhatsApp Floating Icon */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  transition: none;
+}
+.whatsapp-float:hover {
+  box-shadow: none;
+}
+
+/* Scroll to Top Arrow */
+.scroll-top-arrow {
+  position: fixed;
+  bottom: 90px;
+  right: 32px;
+  z-index: 9999;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.scroll-top-arrow:hover {
+  box-shadow: none;
+}
 .landing-container{
     padding: 20px 5%;
 }

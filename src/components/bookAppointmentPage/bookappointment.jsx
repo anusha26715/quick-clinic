@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { doctors } from '../../data'
 import './bookappointment.css'
@@ -66,6 +66,34 @@ const BookAppointment = () => {
     }
     if (!formData.appointmentTime) {
       newErrors.appointmentTime = 'Appointment time is required'
+    } else if (doctor && formData.appointmentDate) {
+      // Check if selected time is within doctor's schedule for that day
+      const selectedDate = new Date(formData.appointmentDate)
+      const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+      const selectedDay = daysOfWeek[selectedDate.getDay()]
+      const scheduleForDay = doctor.schedule.find(s => s.day === selectedDay)
+      if (!scheduleForDay) {
+        newErrors.appointmentTime = `Doctor is not available on ${selectedDay}`
+      } else {
+        // Parse schedule time range
+        const [start, end] = scheduleForDay.time.split(' - ')
+        const to24 = t => {
+          let [time, period] = t.split(' ')
+          let [h, m] = time.split(':').map(Number)
+          if (period === 'PM' && h !== 12) h += 12
+          if (period === 'AM' && h === 12) h = 0
+          return h * 60 + m
+        }
+        const selectedMinutes = (() => {
+          let [h, m] = formData.appointmentTime.split(':').map(Number)
+          return h * 60 + m
+        })()
+        const startMinutes = to24(start)
+        const endMinutes = to24(end)
+        if (selectedMinutes < startMinutes || selectedMinutes > endMinutes) {
+          newErrors.appointmentTime = `Doctor is only available from ${start} to ${end} on ${selectedDay}`
+        }
+      }
     }
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required'
@@ -222,7 +250,7 @@ const BookAppointment = () => {
                   </button>
 
                   <Link to={`/doctor/${doctor.id}`} className="btn custom-primary-btn btn-lg ms-2">
-                    back
+                    Back
                   </Link>
                 </div>
               </form>

@@ -1,4 +1,5 @@
 import React,{Suspense,lazy,useEffect} from 'react'
+import Loader from './components/Loader'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
@@ -8,12 +9,13 @@ import AOS from 'aos'
 import Header from './components/header/header'
 import './App.css'
 
-const Home = lazy(()=> import('./components/homePage/home'))
-const About = lazy(()=> import('./components/aboutPage/about'))
-const Landing = lazy(() => import('./components/landingPage/landing'))
+
+const Home = lazy(() => import('./components/homePage/home'));
+const About = lazy(()=> import('./components/aboutPage/about'));
+const Landing = lazy(() => new Promise(resolve => setTimeout(() => resolve(import('./components/landingPage/landing')), 2000)));
 const Services = lazy(()=> import('./components/servicesPage/services'))
 const Contact = lazy(() => import('./components/contactPage/contact'))
-const DoctorProfile = lazy(() => import('./components/doctorProfilePage/doctorprofile'))
+const DoctorProfile = lazy(() => import('./components/doctorProfilePage/doctorprofile'));
 const BookAppointment = lazy(()=> import('./components/bookAppointmentPage/bookappointment'))
 const Notfound = lazy(()=> import('./components/notFoundPage/notfound'))
 
@@ -32,7 +34,7 @@ function App() {
   return (
     <Router>
       <Header/>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Navigate to="/home" replace/>} />
           <Route path="/home" element={<Home />} />
