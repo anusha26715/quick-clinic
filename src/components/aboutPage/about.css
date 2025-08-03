@@ -1,0 +1,129 @@
+.about-container {
+    padding: 30px 6%;
+    width: 100%;
+}
+
+.head-line {
+    font-size: 14px;
+    color: var(--color-nav-text) !important;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 1px;
+}
+
+
+
+section>h2{
+    font-weight: bold;
+}
+
+.about-content-container{
+    width: 100%;
+    height: fit-content;
+}
+
+#Row{
+    margin: 3% 0;
+}
+
+.img-content-container{
+    padding: 0!important;
+    position: relative;
+    height: fit-content;
+}
+
+.about-image{
+    height: 67vh;
+}
+
+.img-fluid{
+    border-radius: 20px !important;
+}
+
+.experience-badge{
+    background-color: var(--color-lighttealblue);
+    padding: 12px 26px 20px 26px;
+    border-radius: 10px;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+
+.experience-num{
+    font-size: 36px;
+    font-weight: bold;
+    
+}
+
+
+.about-context>h2{
+    font-weight: bold;
+    font-size: clamp(28px,5vw,38px);
+}
+
+.about-context-para1{
+    font-size: 20px;
+    font-weight: 0 !important;
+}
+
+.about-context-para2, .about-card>p{
+    font-size: 17px;
+}
+
+.about-cards{
+    padding: 20px 0;
+}
+
+.about-card>h5{
+    font-size: 20px;
+}
+
+.about-card{
+    background-color: var(--color-lighttealblue);
+    border-radius: 12px;
+    padding: 18px;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.about-card:hover{
+    transform: translateY(-15px);
+}
+
+.about-card i{
+    font-size: 30px;
+    padding-bottom: 10px !important;
+    display: inline-block;
+}
+
+.abt-explore-service-btn{
+    background-color: var(--color-tealblue);
+    padding: 10px 32px;
+    border-radius: 35px;
+    transition: all 0.4s ease-in-out;
+    border: none;
+}
+
+.abt-explore-service-btn:hover{
+    background-color: var(--color-navyblue);
+}
+
+.abt-explore-service-btn:hover a{
+    color: var(--color-contrast) !important;
+}
+
+
+.abt-explore-service-btn>a{
+    text-decoration: none;
+    color: var(--color-navyblue);
+    transition: all 0.4s ease-in-out;
+}
+
+

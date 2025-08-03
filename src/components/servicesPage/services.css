@@ -1,0 +1,55 @@
+.cta-content{
+    background: var(--color-contrast);
+    padding: 60px 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 50px color-mix(in srgb, var(--default-color), transparent 90%);
+    border: 2px solid color-mix(in srgb, var(--color-tealblue), transparent 80%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-content>i{
+    display: inline-block;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-book {
+    background: var(--color-tealblue);
+    color: var(--color-contrast);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--color-tealblue);
+}
+
+.btn-book:hover{
+    background-color: var(--color-navyblue);
+    border-color: var(--color-navyblue);
+}
+
+
+.btn-contact {
+    background: transparent;
+    color: var(--color-tealblue);
+    padding: 15px 30px;
+    border: 2px solid color-mix(in srgb, var(--color-tealblue), transparent 70%);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-contact:hover{
+    background: var(--color-tealblue);
+    color: var(--color-contrast);
+    border-color: var(--color-tealblue); ;
+}
