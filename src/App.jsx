@@ -7,6 +7,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 import Header from './components/header/header'
+import Footer from './components/footer/footer'
 import './App.css'
 
 
@@ -47,6 +48,7 @@ function App() {
           <Route path="*" element={<Notfound />} />
         </Routes>
       </Suspense>
+      <Footer/>
     </Router>
   )
 }
